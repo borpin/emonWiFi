@@ -57,14 +57,14 @@ With the emonTx5's USB-C port to the right, insert the emonWiFi into the pins be
 
 With the emonTx6's USB-C port to the right, insert the emonWiFi into the 40pin socket towards the bottom as far to the right as possible with the emonWiFi's USB-C port also to the right.
 
-## Software Setup
+## Firmware Setup
 
 > [!WARNING]
 > You must not connect the USB-C port of the emonWiFi while the emonWiFi is plugged into an emonTx. Doing so can cause damage to your emonTx.
 
 To install firmware for the first time, hold down the push button on the emonWiFi while plugging in the USB-C cable. This puts the ESP32 module into bootloader mode which allows firmware to be uploaded over the USB connection. After the first upload, you can use OTA updates.
 
-### ESPHome
+### ESPHome Firmware
 
 The emonWiFi is natively supported by ESPHome. See the ESPHome emonTx component [documentation](https://esphome.io/components/sensor/emontx/) for configuration details. This does not mean you need to use Home Assistant. The ESPHome firmware will communicate directly with emoncms by MQTT or HTTP(S).
 
@@ -109,8 +109,6 @@ sensor:
     tag_name: "E1"
     name: "Energy CT1"
 ```
-
-### ESPHome
 
 You do not need to integrate the emonWiFi running ESPHome with any larger home automation system. The configuration for an emonWiFi connected to an emonTx is documented in the Home Assistant integration [documentation](https://github.com/FredM67/ha-emon-config#configuration).
 
